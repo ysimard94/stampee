@@ -1,0 +1,74 @@
+/* Style de bannière de base ainsi que l'emplacement de son contenu */
+.banner {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    background-color: #6571B1;
+    min-height: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustement de rythme pour son contenu */
+.banner *+* {
+    margin-top: 20px;
+}
+
+.banner > * {
+    margin-inline: 15px;
+}
+
+/* Ajustement de la taille et "épaisseur" de la police */
+.banner h1 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.banner h2 {
+    font-size: 2em;
+    font-weight: 200;
+}
+
+/* Faire que la barre de texte pour s'inscrire à l'infolettre soit d'une taille respectable et qu'il y ai 
+un peu de dégagement entre le placeholder et le début de la barre */
+.subscribe input {
+    width: 400px;
+    padding-left: 1em;
+}
+
+/* Enlever la marge initiale pour pas que le champ de texte soit plus grand que le bouton */
+.subscribe button {
+    margin-top: 0;
+}
+
+/* Cacher le label qui n'est pas nécessaire */
+.subscribe label {
+    display: none;
+}
+
+@media screen and (max-width: 675px) {
+    /* Ajustement de la taille de texte une fois l'écran plus petit */
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .banner h2 {
+        font-size: 1.5em;
+    }
+
+    .banner button {
+        font-size: 1em;
+    }
+
+    /* Changement de l'orientation de la barre de texte et de son bouton */
+    .subscribe {
+        flex-direction: column;
+    }
+
+    /* Faire que le bouton de la barre de texte prenne toute la largeur pour être la même que celle-ci*/
+    .subscribe input {
+        padding: 10px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+/* Basé sur https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
+.auction-table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    max-width: 1080px;
+}
+
+.auction-table a{
+    color: black;
+}
+
+.auction-table a:hover {
+    color: grey;
+}
+
+.auction-table thead tr {
+    background-color: #262E5C;
+    color: #ffffff;
+    text-align: left;
+}
+
+.auction-table th,
+.auction-table td {
+    padding: 12px 15px;
+}
+
+.auction-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.auction-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.auction-table tbody tr:last-of-type {
+    border-bottom: 2px solid #262E5C;
+}
+
+.auction-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

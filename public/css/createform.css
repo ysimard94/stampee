@@ -1,0 +1,30 @@
+.createform {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-block: 50px;
+    margin-inline: auto;
+}
+
+.createform > * + * {
+    margin-top: 1em;
+}
+
+.createform input {
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px 10px;
+
+}
+
+.createform > input {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #262E5C;
+}
+
+.createform > input:hover{
+    background-color: #8b93be;
+}

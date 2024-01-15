@@ -1,0 +1,20 @@
+/* Ajustement de la présentation et du style des options pour le nombre de résultats par page sur la page catalogue */
+.result-options {
+    display: flex;
+}
+
+.result-options span {
+    color: black;
+}
+
+.result-options a {
+    padding-inline: 5px;
+}
+
+.result-options *+* {
+    border-left: 1px solid black;
+}
+
+.selected-option {
+    border-bottom: 1px solid black;
+}

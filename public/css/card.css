@@ -1,0 +1,60 @@
+/* Style et largeur initial de la carte de timbre */
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border: 3px solid #ECE8E9;
+}
+
+/* Ajout de rythme pour le contenu de la carte */
+.card > * {
+    margin-inline: 10px;
+}
+
+/* Style pour le titre du timbre */
+.card > h3 {
+    font-family: EB Garamond, serif;
+    color: #222E5E;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Conteneur pour l'image */
+.card-img-container {
+    display: flex;
+    background-color: rgba(217, 217, 217, 0.5);
+    margin-top: 20px;
+    margin-inline: 20px;
+    height: 150px;
+}
+
+/* POur que l'image prenne tout l'espace du conteneur et soit centrée */
+.card-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-inline: auto;
+}
+
+/* Ajout de padding au-dessus si le titre est trop long pour toujours avoir du rythme,
+sinon avec le margin-top auto le contenu est toujours envoyé au bas de la carte */
+.card-auction-info {
+    padding-top: 50px;
+    margin-top: auto;
+}
+
+/* Style du texte dans la partie information (prix, nombre d'enchères, temps restant) */
+.card-auction-info span {
+    color: black;
+    font-family: EB Garamond, serif;
+}
+
+/* Rythme entre chaque d'information */
+.card-auction-info p {
+    margin-top: 5px;
+}
+
+/* Rythme pour le bouton de mise */
+.card button {
+    margin-block: 15px;
+}

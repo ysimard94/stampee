@@ -1,0 +1,110 @@
+/* Enlever toute marge et padding de base, mettre une police standard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+main {
+    min-height: 70vh;
+}
+
+
+/* Rythme de base pour le contenu main */
+main > * {
+    margin-inline: 100px;
+}
+
+/* rythme de base entre les sections directes du main */
+main > * + * {
+    padding-block: 30px;
+}
+
+/* Rythme de base entre le contenu direct des sections  */
+section > *+* {
+    margin-top: 30px;
+}
+
+/* Style initial pour les liens */
+a {
+    text-decoration: none;
+}
+
+/* Faire que les images prennent tout l'espace initialement */
+img {
+    display: block;
+}
+
+/* Classes flex pour l'ajout quand nécessaire */
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Classe dans le but de pousser un élément complètement à droite quand nécessaire */
+.right {
+    display: block;
+    margin-left: auto
+}
+
+/* Classe qui va ajouter une bordure en haut de l'élément */
+.border-top {
+    border-top: 3px solid #ECE8E9;
+}
+
+/* Classes qui vont servir à réinitialiser les valeurs données initialement qui ne sont pas désirées 
+dans des situations spécifiques */
+.padding-bottom-reset {
+    padding-bottom: 0;
+}
+
+.margin-reset {
+    margin: 0;
+}
+
+.margin-inline-reset {
+    margin-inline: 0;
+}
+
+.margin-left-reset {
+    margin-left: 0;
+}
+
+.margin-bottom-reset {
+    margin-bottom: 0;
+}
+
+.button-style-reset {
+    display: flex;
+    background-color: white;
+    margin-block: 30px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.button-style-reset:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Faire que la marge soit plus étroite quand l'écran est plus restraint */
+@media only screen and (max-width: 650px) {
+    main > * {
+        margin-inline: 25px;
+    }
+}

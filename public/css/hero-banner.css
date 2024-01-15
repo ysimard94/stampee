@@ -1,0 +1,43 @@
+/* Style de la bannière héro ainsi que l'ajustement de la présentation de son contenu */
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    min-height: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustement de rythme pour son contenu */
+.hero-banner *+* {
+    margin-top: 20px;
+}
+
+.hero-banner > * {
+    margin-inline: 15px;
+}
+
+/* Ajustement de la taille et "épaisseur" de la police */
+.hero-banner h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.hero-banner h2 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+/* Faire que l'image prenne tout l'espace de la bannière hero */
+.hero-banner img {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    object-fit: cover;
+    z-index: -1;
+}

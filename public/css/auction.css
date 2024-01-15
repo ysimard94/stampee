@@ -1,0 +1,136 @@
+/* Pour que le contenu soit plus concentré sur la page de fiche */
+main {
+    max-width: 1500px;
+    margin-inline: auto;
+}
+
+/* Ajustement du rythme, centrer le contenu de l'enchère */
+.auction > * {
+    margin: 30px 15px;
+}
+
+/* Ajustement de la taille du titre et de sa police */
+.auction h1 {
+    font-family: EB Garamond, serif;
+    font-size: 2.5em;
+}
+
+/* Ajustement de la taille du prix et de sa police */
+.auction h2 {
+    font-family: EB Garamond, serif;
+    font-size: 2em;
+}
+
+/* Changement de la couleur du texte de survol d'image */
+.stamp-images p {
+    color: #747474;
+    margin: 0;
+}
+
+/* Créer du rythme entre les aperçus et la grande image */
+.stamp-images *+* {
+    margin-left:30px;
+}
+
+/* Ajout de rythme entre le texte d'informations de l'enchère */
+.auction-info *+* {
+    margin-top: 5px;
+}
+
+/* Ajout de rythme entre les options d'enchère et son information */
+.auction-options {
+    padding-top: 2em;
+}
+
+/* Ajout de rythme entre les options de l'enchère */
+.auction-options * {
+    margin-top: 10px;
+}
+
+/* Styliser la barre de texte de mise */
+.auction-options input {
+    border: none;
+    background-color: #D9D9D9;
+    padding: 8px;
+}
+
+/* Styliser les options de mises rapides */
+.quick-bids a{
+    color: black;
+}
+
+.quick-bids a {
+    padding: 5px;
+}
+.quick-bids a:hover {
+    color: white;
+    background-color: #8b93be;
+}
+
+.quick-bids a+a {
+    border-left: 1px solid black;
+}
+
+/* Style pour la mise rapide sélectionnée */
+.selected-bid {
+    color: white;
+    background-color: #262E5C;
+}
+
+.selected-bid span {
+    color: white;
+}
+
+/* Rythme entre les mises et les boutons pour miser */
+.bid-btns {
+    margin-left: 30px;
+}
+
+/* Rythme entre les boutons de mise */
+.bid-btns *+* {
+    margin-top: 20px;
+}
+
+.bid-btns button {
+    padding-block: 8px;
+}
+
+/* Fond de couleur spécifique pour le bouton principal de mise */
+.main-bid {
+    background-color: #9B3D33;
+}
+
+.main-bid:hover {
+    background-color: #cc6459;
+}
+
+/* Ajustement de la taille des images d'aperçu */
+.preview {
+    height: 80px;
+}
+
+/* Cacher le label de la barre de texte de mise qui n'est pas nécessaire dans ce cas */
+.hide-label {
+    display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+    /* Changement de l'orientation de la fiche d'enchère une fois trop serré */
+    .auction {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    /* Ajustement de l'orientation des images une fois trop serré */
+    .stamp-images {
+        flex-direction: column-reverse;
+    }
+    .stamp-images > * {
+        margin: 5px 0;
+    }
+    /* Cacher le texte de survol d'image pour voir l'image agrandie étant donné qu'en mobile ça n'a pas lieu */
+    .stamp-images p {
+        display: none;
+    }
+}

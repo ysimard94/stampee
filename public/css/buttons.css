@@ -1,0 +1,56 @@
+/* Style de bouton de base */
+button {
+    background-color: #262E5C;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5em 5em;
+}
+
+button:hover {
+    background-color: #8b93be;
+}
+
+/* Style du bouton de style secondaire pour les boutons "voir plus" et "trie" dans la page de catalogue */
+.scnd-btn {
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: #FFFFFF;
+    border: 3px solid #262E5C;
+    padding: 0.5em 1em;
+}
+
+/* Ajustement de la distance entre le texte du bouton trie et de la flèche */
+.scnd-btn img {
+    margin-left: 10px;
+    height: 8px;
+}
+
+.scnd-btn:hover {
+    background-color: #e8e8e8;
+}
+
+.hide-filter-menu {
+    display: none;
+}
+
+.bid-btn {
+    background-color: #262E5C;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5em 5em;
+    margin-block: 15px;
+}
+
+.bid-btn:hover {
+    background-color: #8b93be;
+}
+
+form > .follow-btn {
+    margin-top: 0;
+    width: 100%;
+}

@@ -1,0 +1,123 @@
+/* Style du header ainsi que l'ajustement de la présentation de son contenu */
+header {
+    background-color: #262E5C;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+}
+
+/* Rythme du contenu direct du header */
+header > * {
+    margin-block: 30px 15px;
+}
+
+/* Pour que le logo soit centré */
+header > a {
+    margin-inline: auto;
+}
+
+/* Ajustement de la taille du logo */
+.logo {
+    max-width: 200px;
+}
+
+/* Pour que les options de langues ainsi que l'icone de menu membre
+soient en haut à droite, et absolute pour qu'ils n'interfèrent pas
+avec le centrage du logo (si ça se dit) */
+.header-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: fit-content;
+    align-items: flex-end;
+    right: 0;
+    margin: 15px 30px;
+}
+
+.lang-options {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style des options de langues */
+.lang-options a {
+    padding: 8px;
+    font-weight: 200;
+}
+
+/* Bordure à droite de la première option de langue */
+.lang-options > a:first-of-type {
+    border-right: 1px solid #FFFFFF;
+}
+
+.lang-options a:last-of-type {
+    padding-right: 0;
+}
+
+/* Faire que la langue sélectionnée soit soulignée */
+.selected {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.user-login {
+    position: relative;
+    color: white;
+    margin-block: 15px;
+    cursor: pointer;
+}
+
+.user-login > a {
+    border-bottom: 1px solid white;
+}
+
+.user-menu {
+    z-index: 1;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #616685;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-menu a {
+    background-color: #262E5C;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.user-menu a:hover {
+    color: #EED056;
+    background-color: #616685;
+}
+
+.hide-user-menu {
+    display: none;
+}
+
+.user-drpdown-icon {
+    display: inline-block;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 700px) {
+    .user-login {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-menu {
+        top: 100%;
+    }
+
+    header > a {
+        margin-left: 30px;
+    }
+}

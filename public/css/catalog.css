@@ -1,0 +1,77 @@
+/* Style de grid pour l'affichage du catalogue quand il est dans les sections d'aperçus */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 30px;
+}
+
+/* Style de grid pour l'affichage des timbres dans la page de catalogue */
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Rythme entre les cartes du catalogue */
+.catalog,
+.grid-list {
+    gap:20px
+}
+
+.filter-menu {
+    z-index: 1;
+    margin-top: 5px;
+    border: 3px solid #262E5C;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-menu a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.filter-menu a:hover {
+    background-color: #e8e8e8;
+}
+
+/* Ajustement du nombre de cartes par rangée tout dépendemment de la taille de l'écran */
+@media only screen and (max-width: 1550px) {
+    .catalog {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .grid-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .catalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .catalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

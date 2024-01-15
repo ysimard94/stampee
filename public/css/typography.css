@@ -1,0 +1,64 @@
+:root {
+    --text_small: 0.8em;
+    --text_medium: 1em;
+    --text_larger: 1.2em;
+    --text_large : 1.5em;
+
+    --text_color_blue: #222E5E;
+    --text_color_red: #c44343;
+    --text_color_grey: #747474;
+}
+
+/* Styles typographiques pour des situations plus spécifiques */
+
+.w100 {
+    font-weight: 100;
+}
+
+.w200 {
+    font-weight: 200;
+}
+
+.w300 {
+    font-weight: 300;
+}
+
+.w400 {
+    font-weight: 400;
+}
+
+.w500 {
+    font-weight: 500;
+}
+
+.w600 {
+    font-weight: 600;
+}
+
+.text-small {
+    font-size: var(--text_small);
+}
+
+.text-medium {
+    font-size: var(--text_medium);
+}
+
+.text-larger {
+    font-size: var(--text_larger);
+}
+
+.text-large {
+    font-size: var(--text_large);
+}
+
+.text-color_blue {
+    color: var(--text_color_blue);
+}
+
+.text-color_red {
+    color: var(--text_color_red);
+}
+
+.text-color_grey {
+    color: var(--text_color_grey);
+}

@@ -1,0 +1,139 @@
+/* Ajustement du style et de la présentation du contenu de la navigation */
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #262E5C;
+}
+
+nav a {
+    color: white;
+}
+
+/* Style pour les liens de navigation et ajustement de la présentation du contenu */
+nav div {
+    background-color: #262E5C;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Ajustement du rythme et de la taille de la police des liens */
+nav div > a {
+    font-size: 1.2em;
+    padding: 0.5em 2em;
+    margin-block: 15px;
+}
+
+/* Créer du rythme entre le côté de la page et le premier lien */
+.menu a:first-of-type {
+    margin-left: 30px;
+}
+
+/* Effet de survol du menu */
+nav div a:hover {
+    color: #EED056;
+    background-color: rgba(217, 217, 217, 0.33);
+}
+
+/* Ajustement de la présentation du contenu de la section de recherche */
+.search {
+    display: flex;
+    margin-left: auto;
+    color: white;
+    margin-right: 30px;
+}
+
+/* Ajustement de la taille de la barre de recherche */
+.search-bar {
+    width: 400px;
+    padding-left: 1em;
+}
+
+/* Ajustement de la taille et rythme de l'icone de recherche */
+.search input[type="image"] {
+    width: 33px;
+    height: 33px;
+    margin-left: 15px;
+}
+
+/* Cacher le label non nécessaire de l'input de recherche */
+.search label {
+    display: none;
+}
+
+/* Création du bouton de menu mobile qui est normalement caché */
+.menu-btn {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1450px) {
+    /* Centre dans la page le menu de navigation */
+    nav div {
+        margin-inline: auto;
+    }
+
+    /* Enlève la marge initiale non nécessaire du premier lien */
+    nav a:first-of-type {
+        margin-left: 0;
+    }
+
+    /* Ajustement de la taille de la section de recherche pour qu'elle prenne tout l'espace */
+    .search {
+        margin-left: 30px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    /* Pour que la barre de recherche prenne tout l'espace possible */
+    .search-bar {
+        width: 100%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 990px) {
+    /* Ajustement de la taille du texte des liens du menu */
+    nav div > a {
+        font-size: 1em;
+        padding: 0.5em 1em;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    /* Pour cacher (ou non) le menu au clic du bouton de menu à l'aide de javascrpit */
+    .hide {
+        display: none;
+    }
+    
+    /* Ajustement du style du menu pour l'adapter mobile */
+    .menu {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    /* Faire que les liens prennent tout l'espace, réinitialisation de la marge initiale */
+    .menu a {
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+    }
+
+    /* Ajouter une bordure au haut du menu mobile pour rendre ça plus clair ou il commence */
+    .menu {
+        border-top: 1px solid #FFFFFF;
+    }
+
+    /* Ajustement de la position du bouton de menu mobile */
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+}
