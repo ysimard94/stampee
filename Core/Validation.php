@@ -15,6 +15,8 @@
 
     class Validation {
 
+        protected $data = [];  
+
         /**
          * @var array $patterns
          */
@@ -49,7 +51,7 @@
          */
         public function name($name){
 
-            $this->name = $name;
+            $this->data['name'] = $name;
             return $this;
 
         }
@@ -62,7 +64,7 @@
          */
         public function value($value){
 
-            $this->value = $value;
+            $this->data['value'] = $value;
             return $this;
 
         }
@@ -88,7 +90,7 @@
          */
         public function file($value){
 
-            $this->file = $value;
+            $this->data['file'] = $value;
             return $this;
         }
 
@@ -109,15 +111,15 @@
 
             if($name == 'array'){
 
-                if(!is_array($this->value)){
+                if(!is_array($this->data['value'])){
                     $this->errors[] = 'Le format du champ '.$this->name.' n\'est pas valide.';
                 }
 
             }else{
 
                 $regex = '/^('.$this->patterns[$name].')$/u';
-                if($this->value != '' && !preg_match($regex, $this->value)){
-                    $this->errors[] = 'Le format du champ '.$this->name.' n\'est pas valide.';
+                if($this->data['value'] != '' && !preg_match($regex, $this->data['value'])){
+                    $this->errors[] = 'Le format du champ '.$this->data['name'].' n\'est pas valide.';
                 }
 
             }
@@ -148,8 +150,8 @@
          */
         public function required(){
 
-            if((isset($this->file) && $this->file['error'] == 4) || ($this->value == '' || $this->value == null)){
-                $this->errors[] = 'Le champ '.$this->name.' est obligatoire.';
+            if((isset($this->data['file']) && $this->data['file']['error'] == 4) || ($this->data['value'] == '' || $this->data['value'] == null)){
+                $this->errors[] = 'Le champ '.$this->data['name'].' est obligatoire.';
             }
             return $this;
 
@@ -164,16 +166,16 @@
          */
         public function min($length){
 
-            if(is_string($this->value)){
+            if(is_string($this->data['value'])){
                 
-                if(strlen($this->value) < $length){
-                    $this->errors[] = 'La valeur du champ '.$this->name.' est inférieur à la valeur minimale';
+                if(strlen($this->data['value']) < $length){
+                    $this->errors[] = 'La valeur du champ '.$this->data['name'].' est inférieur à la valeur minimale';
                 }
 
             }else{
 
-                if($this->value < $length){
-                    $this->errors[] = 'La valeur du champ '.$this->name.' est inférieur à la valeur minimale';
+                if($this->data['value'] < $length){
+                    $this->errors[] = 'La valeur du champ '.$this->data['name'].' est inférieur à la valeur minimale';
                 }
             }
             return $this;
@@ -181,8 +183,8 @@
 
         public function minBid($length){
 
-            if($this->value <= $length){
-                $this->errors[] = 'La valeur du champ '.$this->name.' est inférieur à la valeur minimale';
+            if($this->data['value'] <= $length){
+                $this->errors[] = 'La valeur du champ '.$this->data['name'].' est inférieur à la valeur minimale';
             }
 
             return $this;
@@ -197,16 +199,16 @@
          */
         public function max($length){
 
-            if(is_string($this->value)){
+            if(is_string($this->data['value'])){
 
-                if(strlen($this->value) > $length){
-                    $this->errors[] = 'La valeur du champ '.$this->name.' est supérieur à la valeur maximale';
+                if(strlen($this->data['value']) > $length){
+                    $this->errors[] = 'La valeur du champ '.$this->data['name'].' est supérieur à la valeur maximale';
                 }
 
             }else{
 
-                if($this->value > $length){
-                    $this->errors[] = 'La valeur du champ '.$this->name.' est supérieur à la valeur maximale';
+                if($this->data['value'] > $length){
+                    $this->errors[] = 'La valeur du champ '.$this->data['name'].' est supérieur à la valeur maximale';
                 }
 
             }
